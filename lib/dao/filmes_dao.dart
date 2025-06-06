@@ -42,14 +42,13 @@ class FilmesDao{
       return await db.update(
         'filmes',
         filme.toMap(),
-        where: 'id = ?', // Assumindo que sua coluna de ID se chama 'id'
+        where: 'id = ?',
         whereArgs: [filme.id],
       );
     } catch (e) {
       print('Erro ao atualizar filme com id ${filme.id}: $e');
       return null;
     } finally {
-      // CONSIDERE REMOVER ESTA LINHA.
       db.close();
     }
   }

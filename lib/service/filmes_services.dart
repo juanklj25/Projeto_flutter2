@@ -42,7 +42,7 @@ class FilmesService {
    Future<void> update(Filmes filme) async {
       int index = _filmes.indexWhere((f) => f?.id == filme.id);
       if (index != -1) {
-         _filmes[index] = filme; // Atualiza os dados do filme
+         _filmes[index] = filme;
       }
    }
 
